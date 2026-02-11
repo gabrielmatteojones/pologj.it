@@ -1,0 +1,711 @@
+<a class="skip-link screen-reader-text" href="{{ site.url }}/#maincontent">Salta al contenuto</a>
+<header class="it-header-wrapper">
+<div class="it-header-slim-wrapper">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<div class="it-header-slim-wrapper-content">
+<div class="nav-mobile">
+
+<a href="https://gjones.pologj.it/" target="_blank" title="GABRIEL JONES DESK"><img src="/desk.png" class="img-ministero" alt="LOGO GABRIEL JONES DESK"></a>
+
+
+</div>
+<!-- Sezione Autenticazione / Scelta Lingua -->
+<div class="header-slim-right-zone">
+<!-- multilang space -->
+
+<div class="it-access-top-wrapper">
+
+<button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#LoginModalForm"><i aria-hidden="true" class="fa fa-user-circle"></i> Accedi</button>
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Modal Login -->
+<div class="modal fade" id="LoginModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content login-form">
+<div class="modal-testata text-center">
+<h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel"><strong>Accedi</strong></h3>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="sr-only">button close</span>
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body mx-4">
+<div class="md-form mb-5">
+<input type="email" id="accedi-mail" class="form-control validate">
+<label data-error="wrong" data-success="right" for="accedi-mail">Nome Utente</label>
+</div>
+<div class="md-form pb-3">
+<input type="password" id="accedi-pwd" class="form-control validate">
+<label data-error="wrong" data-success="right" for="accedi-pwd">Password</label>
+<p class="font-small color-text d-flex justify-content-end"><a href="{{ site.url }}/#" class="color-text ml-1 pwd-reset">Password dimenticata?</a></p>
+</div>
+<div class="md-form pb-1">
+<div class="alert alert-danger accedi-error d-none" role="alert">
+
+</div>
+</div>
+<div class="text-center mb-3">
+<input type="button" value="Accedi" class="btn color-box btn-block btn-rounded z-depth-1a btn-accedi"/>
+</div>
+<div class="text-center mb-3">
+-
+</div>
+<div class="text-center mb-3">
+<a href="{{ site.url }}/#" class="spid_btn italia-it-button italia-it-button-size-m button-spid" aria-haspopup="true" aria-expanded="false"
+onclick="window.location.href='https://web.spaggiari.eu/home/app/default/loginsp.php?act=spidLoginPV&custcode=PNII0005&fin=https%3A%2F%2Fwww.leomajor.edu.it%2Fpvw2%2Fapp%2Fdefault%2Fpvwauthspid.php%3Fact%3DloginSPID%26rel%3DaHR0cHM6Ly93d3cubGVvbWFqb3IuZWR1Lml0Lw%3D%3D'">
+<span class="italia-it-button-icon">
+<img src="{{ site.url }}//home/img/spid_btn/spid-ico-circle-bb.svg" onerror="this.src='/home/img/spid_btn/spid-ico-circle-bb.png'; this.onerror=null;" alt="" />
+</span>
+<span class="italia-it-button-text">Entra con SPID</span>
+</a>
+<a href="{{ site.url }}/#" class="spid_btn italia-it-button italia-it-button-size-m button-spid" aria-haspopup="true" aria-expanded="false"
+onclick="window.location.href='https://web.spaggiari.eu/home/app/default/loginsp.php?act=spidLoginPV&custcode=PNII0005&fin=https%3A%2F%2Fwww.leomajor.edu.it%2Fpvw2%2Fapp%2Fdefault%2Fpvwauthspid.php%3Fact%3DloginSPID%26rel%3DaHR0cHM6Ly93d3cubGVvbWFqb3IuZWR1Lml0Lw%3D%3D'">
+<span class="italia-it-button-icon">
+<img src="{{ site.url }}//home/img/cie-graphics-master/SVG/Logo_CIE_ID.svg" onerror="this.src='/home/img/cie-graphics-master/PNG/entra con cie.png'; this.onerror=null;" alt="" />
+</span>
+<span class="italia-it-button-text">Entra con CIE</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- /Modal Login -->
+
+<!-- Modal selezione utente -->
+<div class="modal fade" id="UserSelectModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content login-form">
+<div class="modal-testata text-center">
+<h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel2"><strong>Seleziona utente</strong></h3>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="sr-only">button close</span>
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body mx-4">
+
+</div>
+</div>
+</div>
+</div>
+<!-- /Modal selezione utente -->
+
+<!-- Modal pwd dimenticata -->
+<div class="modal fade" id="ForgotPwdModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content login-form">
+<div class="modal-testata text-center">
+<h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel3"><strong>Recupero password</strong></h3>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="sr-only">button close</span>
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body mx-4">
+<form id="pvw-reminder-form">
+<div class="md-form pb-3">
+<input type="email" id="forgot-mail" name="eml" class="form-control validate">
+<label data-error="wrong" data-success="right" for="forgot-mail">E-mail</label>
+<small>Verrà inviato un messaggio all'indirizzo indicato con le istruzioni necessarie.</small><br><br>
+<small>Non hai una e-mail associata al nome utente? Effettua il reset della password tramite la
+<a href="https://web.spaggiari.eu" target="_blank">Login Spaggiari</a></small>
+</div>
+<div class="md-form pb-1">
+<input type="text" name="captcha" class="captcha" placeholder="Codice di controllo">
+</div>
+<div class="md-form pb-1">
+<div class="alert alert-success reset-success d-none" role="alert">
+E-mail inviata, si prega di controllare la casella di posta elettronica!
+</div>
+</div>
+<div class="md-form pb-1">
+<div class="alert alert-danger reset-error d-none" role="alert">
+
+</div>
+</div>
+<div class="text-center mb-3">
+<input type="hidden" value="akRSPWRQ" name="a">
+<input type="button" value="Invia" class="btn color-box btn-block btn-rounded z-depth-1a btn-reminder"/>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<!-- /Modal pwd dimenticata -->
+
+<!-- Modal vari -->
+<div class="modal fade" tabindex="-1" role="dialog" id="error-modal" data-backdrop="static" data-keyboard="false">
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<span class="modal-title"><strong>Errore</strong></span>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="col-12 text-center mt-1">
+<i aria-hidden="true" class="fas fa-times-circle error-modal-icon"></i>
+<p class="error-modal-text text-center mt-2 mb-0"></p>
+</div>
+</div>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary btn-azione" data-dismiss="modal">Chiudi</button>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" id="ok-modal" data-backdrop="static" data-keyboard="false">
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<span class="modal-title"><strong>Successo</strong></span>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="col-12 text-center mt-1">
+<i aria-hidden="true" class="fas fa-check-circle ok-modal-icon"></i>
+<p class="ok-modal-text text-center mt-2 mb-0"></p>
+</div>
+</div>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary btn-azione" data-dismiss="modal">Chiudi</button>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" id="info-modal" data-backdrop="static" data-keyboard="false">
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<span class="modal-title"><strong>Informazione</strong></span>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="col-12 text-center mt-1">
+<i aria-hidden="true" class="fas fa-info-circle info-modal-icon"></i>
+<p class="info-modal-text text-center mt-2 mb-0"></p>
+</div>
+</div>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary btn-azione" data-dismiss="modal">Chiudi</button>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" id="loading-modal" data-backdrop="static" data-keyboard="false">
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<span class="modal-title" style="font-weight:bold">Attendere...</span>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="col-12 text-center py-5 px-5">
+<div class="d-flex justify-content-center">
+<div class="spinner-border" role="status"></div>
+</div>
+Attendere il completamento dell'operazione...
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="sp-event-modal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog modal-xl" role="document">
+<div class="modal-content">
+<div class="modal-body mx-4">
+
+</div>
+<div class="modal-footer">
+<div class="btn-modal-fixed-top-right">
+<button type="button" class="btn btn-outline-secondary btn-modal-close" data-dismiss="modal" data-tooltip="tooltip" title="Chiudi">
+<span class="sr-only">Chiudi</span>
+<svg class="icon">
+<use xlink:href="/pvw2/img/sprite.svg#it-close-big"></use>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="content-modal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog modal-xl" role="document">
+<div class="modal-content">
+<div class="modal-body">
+
+</div>
+<div class="modal-footer">
+<div class="btn-modal-fixed-top-right">
+<button type="button" class="btn btn-outline-secondary btn-modal-close" data-dismiss="modal" data-tooltip="tooltip" title="Chiudi">
+<span class="sr-only">Chiudi</span>
+<svg class="icon">
+<use xlink:href="/pvw2/img/sprite.svg#it-close-big"></use>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="confirm-modal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<span class="modal-title" style="font-weight:bold">Conferma</span>
+</div>
+<div class="modal-body">
+<div class="confirm-modal-text"></div>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-secondary" data-dismiss="modal">Annulla</button>
+<button type="button" class="btn btn-primary" data-dismiss="modal">Conferma</button>
+</div>
+</div>
+</div>
+</div>
+<!-- /Modal vari -->
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="it-nav-wrapper">
+<div class="it-header-center-wrapper">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<div class="it-header-center-content-wrapper">
+<div class="it-brand-wrapper">
+<a href="{{ site.url }}" title="Torna alla homepage">
+
+<h1>
+<span class="media">
+<img class="align-self-center logo_scuola" src="{{ site.url }}/assets/logo.png" alt="LOGO">
+
+</span>
+</h1>
+
+
+</a>
+</div>
+<div class="it-right-zone">
+<div class="it-search-wrapper">
+<div class="hidden-xs search" style="float:right;">
+<div class="pull-right">
+<span class="input-group-btn">
+<button class="btn-search search-link rounded-icon" type="button" data-toggle="modal" data-target="#searchModal" aria-label="Apri ricerca" data-element="search-modal-button">
+<svg class="icon">
+<use xlink:href="/pvw2/img/sprite.svg#it-search"></use>
+</svg>
+</button>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="navigation-bar" class="it-header-navbar-wrapper">
+<div class="container">
+<div class="row">
+<div class="col-12">
+<nav class="navbar navbar-expand-lg has-megamenu" aria-label="Menu principale">
+<button class="custom-navbar-toggler" type="button" aria-controls="nav10" aria-expanded="false" aria-label="Toggle navigation" data-target="#nav10">
+<svg class="icon">
+<use xlink:href="/pvw2/img/sprite.svg#it-burger"></use>
+</svg>
+</button>
+<div class="navbar-collapsable" id="nav10">
+<div class="overlay"></div>
+<div class="close-div sr-only">
+<button class="btn close-menu" type="button"><span class="it-close"></span>close</button>
+</div>
+<div class="menu-wrapper">
+<ul class="navbar-nav" data-element="menu">
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="{{ site.url }}/#" data-toggle="dropdown" aria-expanded="false">
+<span>Scuola</span>
+<svg class="icon icon-xs">
+<use xlink:href="/pvw2/img/sprite.svg#it-expand"></use>
+</svg>
+</a>
+
+<div class="dropdown-menu">
+<div class="link-list-wrapper">
+<ul class="link-list" data-element="school-submenu">
+
+<li class="d-none">
+<a class="list-item" href="{{ site.url }}//panoramica/Scuola" target="_self" data-element="overview">
+<span><strong>Panoramica</strong></span>
+</a>
+</li>
+
+
+<li>
+<a class="list-item" href="{{ site.url }}//pagine/presentazione" target="_self" >
+<span>Presentazione</span>
+</a>
+</li>
+
+
+<li>
+<a class="list-item" href="{{ site.url }}//luoghi" target="_self" data-element="school-locations">
+<span>I luoghi</span>
+</a>
+</li>
+
+
+<li>
+<a class="list-item" href="{{ site.url }}//persone" target="_self" >
+<span>Le persone</span>
+</a>
+</li>
+
+
+<li>
+<a class="list-item" href="{{ site.url }}//pagine/i-numeri-della-scuola" target="_self" >
+<span>I numeri della scuola</span>
+</a>
+</li>
+
+
+<li>
+<a class="list-item" href="{{ site.url }}//carte-della-scuola" target="_self" >
+<span>Le carte della scuola</span>
+</a>
+</li>
+
+
+<li>
+<a class="list-item" href="{{ site.url }}//organizzazione" target="_self" >
+<span>Organizzazione</span>
+</a>
+</li>
+
+
+<li>
+<a class="list-item" href="{{ site.url }}//pagine/la-storia" target="_self" >
+<span>La storia</span>
+</a>
+</li>
+
+
+</ul>
+</div>
+</div>
+</li>
+
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="{{ site.url }}/#" data-toggle="dropdown" aria-expanded="false">
+<span>Servizi</span>
+<svg class="icon icon-xs">
+<use xlink:href="/pvw2/img/sprite.svg#it-expand"></use>
+</svg>
+</a>
+
+<div class="dropdown-menu">
+<div class="link-list-wrapper">
+<ul class="link-list" data-element="services-submenu">
+
+<li class="d-none">
+<a class="list-item" href="{{ site.url }}//panoramica/Servizi" target="_self" data-element="overview">
+<span><strong>Panoramica</strong></span>
+</a>
+</li>
+
+
+<li>
+<a class="list-item" href="{{ site.url }}//servizi-famiglie" target="_self" data-element="service-type">
+<span>Famiglie e studenti</span>
+</a>
+</li>
+
+
+<li>
+<a class="list-item" href="{{ site.url }}//servizi-personale" target="_self" data-element="service-type">
+<span>Personale scolastico</span>
+</a>
+</li>
+
+
+<li>
+<a class="list-item" href="{{ site.url }}//percorsi-studio" target="_self" >
+<span>Percorsi di studio</span>
+</a>
+</li>
+
+
+<li>
+<a class="list-item" href="{{ site.url }}//pagine/orientamento-in-entrata" target="_self" >
+<span>Orientamento</span>
+</a>
+</li>
+
+
+<li>
+<a class="list-item" href="{{ site.url }}/areapersonale/" target="_self" >
+<span>Area Riservata</span>
+</a>
+</li>
+
+
+</ul>
+</div>
+</div>
+</li>
+
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="{{ site.url }}/#" data-toggle="dropdown" aria-expanded="false">
+<span>Novità</span>
+<svg class="icon icon-xs">
+<use xlink:href="/pvw2/img/sprite.svg#it-expand"></use>
+</svg>
+</a>
+
+<div class="dropdown-menu">
+<div class="link-list-wrapper">
+<ul class="link-list" data-element="news-submenu">
+
+<li class="d-none">
+<a class="list-item" href="{{ site.url }}//panoramica/Novit%C3%A0" target="_self" data-element="overview">
+<span><strong>Panoramica</strong></span>
+</a>
+</li>
+
+
+<li>
+<a class="list-item" href="{{ site.url }}//archivio-news" target="_self" >
+<span>Le notizie</span>
+</a>
+</li>
+
+
+<li>
+<a class="list-item" href="{{ site.url }}//comunicati" target="_self" >
+<span>Le circolari</span>
+</a>
+</li>
+
+
+<li>
+<a class="list-item" href="{{ site.url }}//pagine/calendario-eventi" target="_self" >
+<span>Calendario eventi</span>
+</a>
+</li>
+
+
+<li>
+<a class="list-item" href="{{ site.url }}//albo-online" target="_self" >
+<span>Albo online</span>
+</a>
+</li>
+
+
+</ul>
+</div>
+</div>
+</li>
+
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="{{ site.url }}/#" data-toggle="dropdown" aria-expanded="false">
+<span>Didattica</span>
+<svg class="icon icon-xs">
+<use xlink:href="/pvw2/img/sprite.svg#it-expand"></use>
+</svg>
+</a>
+
+<div class="dropdown-menu">
+<div class="link-list-wrapper">
+<ul class="link-list" data-element="teaching-submenu">
+
+<li class="d-none">
+<a class="list-item" href="{{ site.url }}//panoramica/Didattica" target="_self" data-element="overview">
+<span><strong>Panoramica</strong></span>
+</a>
+</li>
+
+
+<li>
+<a class="list-item" href="{{ site.url }}//pagine/offerta-formativa" target="_self" >
+<span>Offerta formativa</span>
+</a>
+</li>
+
+
+<li>
+<a class="list-item" href="{{ site.url }}//pagine/progetti" target="_self" >
+<span>I progetti delle classi</span>
+</a>
+</li>
+
+
+<li>
+<a class="list-item" href="{{ site.url }}//pagine/orario-delle-lezioni" target="_self" >
+<span>Orario delle lezioni</span>
+</a>
+</li>
+
+
+<li>
+<a class="list-item" href="{{ site.url }}//pagine/percorsi-per-le-competenze-trasversali-e-per-lorientamento" target="_self" >
+<span>FSL (ex pcto)</span>
+</a>
+</li>
+
+
+<li>
+<a class="list-item" href="{{ site.url }}//pagine/esame-di-stato" target="_self" >
+<span>Esame di Stato</span>
+</a>
+</li>
+
+
+</ul>
+</div>
+</div>
+</li>
+
+
+<li class="nav-item">
+<a class="nav-link" href="{{ site.url }}//pagine/contatti" target="_self">
+<span>Contatti</span>
+</a>
+</li>
+
+
+</ul>
+<div class="it-search-wrapper">
+<div class="hidden-desk search" style="float:left;">
+<div class="pull-right">
+<form class="navbar-right" role="search" action="/cerca">
+<div class="input-group search-shadow">
+<label for="cerca-mobile" class="sr-only">Campo di ricerca per le pagine del sito</label>
+<input type="hidden" name="tipo" value="cerca">
+<input id="cerca-mobile" type="text" name="cerca_sito" class="form-control" placeholder="Cerca nel sito">
+<span class="input-group-btn">
+<button class="btn-search search-link rounded-icon" type="submit">
+<svg class="icon">
+<use xlink:href="/pvw2/img/sprite.svg#it-search"></use>
+</svg>
+</button>
+</span>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+</header>
