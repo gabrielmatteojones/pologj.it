@@ -22,60 +22,12 @@
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- Modal Login -->
 <div class="modal fade" id="LoginModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 <div class="modal-dialog" role="document">
 <div class="modal-content login-form">
 <div class="modal-testata text-center">
 <h3 class="modal-title w-100 dark-grey-text font-weight-bold my-3" id="myModalLabel"><strong>Accedi</strong></h3>
-<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="sr-only">button close</span>
-<span aria-hidden="true">&times;</span>
-</button>
 </div>
 <div class="modal-body mx-4">
 <div class="md-form mb-5">
@@ -85,35 +37,19 @@
 <div class="md-form pb-3">
 <input type="password" id="accedi-pwd" class="form-control validate">
 <label data-error="wrong" data-success="right" for="accedi-pwd">Password</label>
-<p class="font-small color-text d-flex justify-content-end"><a href="{{ site.url }}/#" class="color-text ml-1 pwd-reset">Password dimenticata?</a></p>
 </div>
-<div class="md-form pb-1">
-<div class="alert alert-danger accedi-error d-none" role="alert">
 
-</div>
-</div>
+
 <div class="text-center mb-3">
-<input type="button" value="Accedi" class="btn color-box btn-block btn-rounded z-depth-1a btn-accedi"/>
+  <button id="login-btn" class="btn btn-primary btn-block">Accedi</button>
 </div>
-<div class="text-center mb-3">
--
+
+<div class="text-center">
+  <small id="login-error" style="color:red;"></small>
 </div>
-<div class="text-center mb-3">
-<a href="{{ site.url }}/#" class="spid_btn italia-it-button italia-it-button-size-m button-spid" aria-haspopup="true" aria-expanded="false"
-onclick="window.location.href='https://web.spaggiari.eu/home/app/default/loginsp.php?act=spidLoginPV&custcode=PNII0005&fin=https%3A%2F%2Fwww.leomajor.edu.it%2Fpvw2%2Fapp%2Fdefault%2Fpvwauthspid.php%3Fact%3DloginSPID%26rel%3DaHR0cHM6Ly93d3cubGVvbWFqb3IuZWR1Lml0Lw%3D%3D'">
-<span class="italia-it-button-icon">
-<img src="{{ site.url }}//home/img/spid_btn/spid-ico-circle-bb.svg" onerror="this.src='/home/img/spid_btn/spid-ico-circle-bb.png'; this.onerror=null;" alt="" />
-</span>
-<span class="italia-it-button-text">Entra con SPID</span>
-</a>
-<a href="{{ site.url }}/#" class="spid_btn italia-it-button italia-it-button-size-m button-spid" aria-haspopup="true" aria-expanded="false"
-onclick="window.location.href='https://web.spaggiari.eu/home/app/default/loginsp.php?act=spidLoginPV&custcode=PNII0005&fin=https%3A%2F%2Fwww.leomajor.edu.it%2Fpvw2%2Fapp%2Fdefault%2Fpvwauthspid.php%3Fact%3DloginSPID%26rel%3DaHR0cHM6Ly93d3cubGVvbWFqb3IuZWR1Lml0Lw%3D%3D'">
-<span class="italia-it-button-icon">
-<img src="{{ site.url }}//home/img/cie-graphics-master/SVG/Logo_CIE_ID.svg" onerror="this.src='/home/img/cie-graphics-master/PNG/entra con cie.png'; this.onerror=null;" alt="" />
-</span>
-<span class="italia-it-button-text">Entra con CIE</span>
-</a>
-</div>
+
+
+
 </div>
 </div>
 </div>
@@ -692,3 +628,44 @@ Attendere il completamento dell'operazione...
 
 </div>
 </header>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyD8Na77eHSTpzzVmmJenjDJNZyIqu4GtZU",
+    authDomain: "gabrieljones-ec8a4.firebaseapp.com",
+    projectId: "gabrieljones-ec8a4",
+    storageBucket: "gabrieljones-ec8a4.firebasestorage.app",
+    messagingSenderId: "861983070652",
+    appId: "1:861983070652:web:cbc75c3494923f747ef3b9",
+    measurementId: "G-8EFNPJP6GB"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+
+  document.getElementById("login-btn").addEventListener("click", function() {
+    const email = document.getElementById("accedi-mail").value;
+    const password = document.getElementById("accedi-pwd").value;
+    const errorBox = document.getElementById("login-error");
+
+    errorBox.textContent = "";
+
+    auth.signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        console.log("Utente loggato:", userCredential.user);
+        location.reload(); // oppure chiudi il modal
+      })
+      .catch((error) => {
+        errorBox.textContent = error.message;
+      });
+  });
+
+  // Controllo stato login
+  auth.onAuthStateChanged(function(user) {
+    if (user) {
+      console.log("Utente già autenticato:", user.email);
+    }
+  });
+</script>
