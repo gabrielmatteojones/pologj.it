@@ -15,7 +15,47 @@
 
 <div class="it-access-top-wrapper">
 
-<button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#LoginModalForm"><i aria-hidden="true" class="fa fa-user-circle"></i> Accedi</button>
+<div id="user-area">
+  <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#LoginModalForm">
+    <i class="fa fa-user-circle"></i> Accedi
+  </button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+  const userArea = document.getElementById("user-area");
+
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // Se vuoi mostrare sempre "Gabriel"
+      userArea.innerHTML = `
+        <a href="/area/" class="btn btn-success btn-sm">
+          <i class="fa fa-user-circle"></i> Ciao, Gabriel
+        </a>
+      `;
+
+      // Se invece vuoi prendere il nome dall'email:
+      // const nome = user.email.split("@")[0];
+    } else {
+      userArea.innerHTML = `
+        <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#LoginModalForm">
+          <i class="fa fa-user-circle"></i> Accedi
+        </button>
+      `;
+    }
+  });
+</script>
 
 
 </div>
