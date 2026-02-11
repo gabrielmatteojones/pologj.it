@@ -33,31 +33,8 @@
 
 
 
-  <script>
-  const userArea = document.getElementById("user-area");
 
-  firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      // Se vuoi mostrare sempre "Gabriel"
-      userArea.innerHTML = `
-        <a href="/area/" class="btn btn-success btn-sm">
-          <i class="fa fa-user-circle"></i> Ciao, Gabriel
-        </a>
-      `;
-
-      // Se invece vuoi prendere il nome dall'email:
-      // const nome = user.email.split("@")[0];
-    } else {
-      userArea.innerHTML = `
-        <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#LoginModalForm">
-          <i class="fa fa-user-circle"></i> Accedi
-        </button>
-      `;
-    }
-  });
-</script>
-
-
+  
 </div>
 </div>
 
@@ -685,27 +662,37 @@ Attendere il completamento dell'operazione...
   firebase.initializeApp(firebaseConfig);
   const auth = firebase.auth();
 
-  document.getElementById("login-btn").addEventListener("click", function() {
-    const email = document.getElementById("accedi-mail").value;
-    const password = document.getElementById("accedi-pwd").value;
-    const errorBox = document.getElementById("login-error");
+  document.addEventListener("DOMContentLoaded", function() {
 
-    errorBox.textContent = "";
+    const userArea = document.getElementById("user-area");
 
-    auth.signInWithEmailAndPassword(email, password)
-      .then((userCredential) => {
-        console.log("Utente loggato:", userCredential.user);
-        location.reload(); // oppure chiudi il modal
-      })
-      .catch((error) => {
-        errorBox.textContent = error.message;
-      });
-  });
+    // LOGIN
+    document.getElementById("login-btn").addEventListener("click", function() {
+      const email = document.getElementById("accedi-mail").value;
+      const password = document.getElementById("accedi-pwd").value;
+      const errorBox = document.getElementById("login-error");
 
-  // Controllo stato login
-  auth.onAuthStateChanged(function(user) {
-    if (user) {
-      console.log("Utente già autenticato:", user.email);
-    }
+      errorBox.textContent = "";
+
+      auth.signInWithEmailAndPassword(email, password)
+        .then(() => {
+          location.reload();
+        })
+        .catch((error) => {
+          errorBox.textContent = error.message;
+        });
+    });
+
+    // STATO UTENTE
+    auth.onAuthStateChanged(function(user) {
+      if (user) {
+        userArea.innerHTML = `
+          <a href="/area/" class="btn btn-success btn-sm">
+            <i class="fa fa-user-circle"></i> Ciao, Gabriel
+          </a>
+        `;
+      }
+    });
+
   });
 </script>
